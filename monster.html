@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make Your Own Scary Monsters</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(31, 223, 210);
+        background-image: url("https://i.ibb.co/x8GdbQW/blue-bubbles-2-wallpaper-1280x1024-Copy.jpg");
+        background-size: cover;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      #wrapper {
+        margin: 0 auto;
+        width: 80%;
+        user-select: none;
+      }
+
+      header {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      header h2 {
+        margin-top: 50px;
+        font: normal 38px/1 "Finger Paint", Helvetica, sans-serif;
+        color: rgba(55, 55, 55, 1);
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      header p {
+        padding: 20px 0;
+        font-size: 18px;
+        color: #901d7e;
+      }
+
+      #partsDiv {
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.31);
+        padding: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        overflow: hidden;
+      }
+
+      #partsDiv img {
+        cursor: pointer;
+        flex: 0 1 auto;
+      }
+
+      #monsterDiv {
+        border: 1px solid white;
+        padding-top: 40px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+      }
+
+      #monsterDiv img {
+        margin: 0 4%;
+        z-index: -1;
+        transition: transform 0.2s;
+      }
+
+      .itemMove {
+        position: absolute;
+      }
+
+      .btn {
+        float: right;
+        outline: none;
+        border: 1px solid #fff;
+        padding: 10px 20px 10px 20px;
+        margin: 20px 0;
+        background-color: #901d7e;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 16px;
+        transition: background-color 0.2s;
+      }
+
+      .btn:hover {
+        background-color: #1858af;
+      }
+
+      .active {
+        transform: rotate(2deg);
+        transition: transform 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h2>Make your own scary monsters</h2>
+        <p>Click and drag the different shapes to make Scary Monsters</p>
+      </header>
+
+      <div id="partsDiv">
+        <img
+          src="https://i.ibb.co/nQ6L5nk/oci1.png"
+          id="oci1"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/mNyxXyh/oci3.png"
+          id="oci3"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/9t8RCGW/oci4.png"
+          id="oci4"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/KG81kqh/oci5.png"
+          id="oci5"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/br1b72Q/oci6.png"
+          id="oci6"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/1MPmQkD/oci8.png"
+          id="oci8"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/f48DRGz/oci2.png"
+          id="oci2"
+          alt=""
+          draggable="true"
+        /><br />
+        <img
+          src="https://i.ibb.co/DQv1ndY/naocare.png"
+          id="naocare"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/w0WBwb8/naocare2.png"
+          id="naocare2"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/pXZxtW2/usta1.png"
+          id="usta1"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/NSKStQW/usta2.png"
+          id="usta2"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/r6Xx0DR/usta4.png"
+          id="usta4"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/LCGGKd9/usta5.png"
+          id="usta5"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/xmcLkX8/usta6.png"
+          id="usta6"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/q1DJCFy/usta7.png"
+          id="usta7"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/d5q0csN/usta8.png"
+          id="usta8"
+          alt=""
+          draggable="true"
+        /><br />
+        <img
+          src="https://i.ibb.co/KXGXDjP/masna.png"
+          id="masna"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/tM41KVp/rogovi.png"
+          id="rogovi"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/qg7d7kY/rogovi2.png"
+          id="rogovi2"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/XW6zp4D/sesir.png"
+          id="sesir"
+          alt=""
+          draggable="true"
+        />
+        <img
+          src="https://i.ibb.co/VgHwgxD/kosa.png"
+          id="kosa"
+          alt=""
+          draggable="true"
+        />
+      </div>
+
+      <div id="monsterDiv">
+        <img
+          src="https://i.ibb.co/cg8mSWg/monster3.png"
+          id="monster1"
+          draggable="false"
+          alt=""
+        />
+        <img
+          src="https://i.ibb.co/tcytcpj/monster2.png"
+          id="monster2"
+          draggable="false"
+          alt=""
+        />
+        <img
+          src="https://i.ibb.co/cgW8dLH/monster4.png"
+          id="monster3"
+          draggable="false"
+          alt=""
+        />
+      </div>
+
+      <input type="button" class="btn" value="Reset" />
+    </div>
+
+    <script>
+      document.body.onload = function () {
+        var monsterDiv = document.getElementById("monsterDiv");
+        var partsDiv = document.getElementById("partsDiv");
+        var parts = partsDiv.getElementsByTagName("img");
+        var monsters = monsterDiv.getElementsByTagName("img");
+        var itemIndex = 0;
+        var xDistance = 0;
+        var yDistance = 0;
+        var foo = null;
+
+        for (var i = 0; i < parts.length; i++) {
+          parts[i].addEventListener("dragstart", dragstartFx, false);
+        }
+
+        function dragstartFx(event) {
+          event.dataTransfer.setData("text", event.target.id);
+          event.dataTransfer.effectAllow = "move";
+
+          if (event.target.style.top === "") {
+            partsDiv.style.backgroundColor = "rgba(255,255,255,0.04)";
+          }
+
+          xDistance = event.clientX - event.target.offsetLeft;
+          yDistance = event.clientY - event.target.offsetTop;
+        }
+
+        for (i = 0; i < monsters.length; i++) {
+          monsters[i].addEventListener("dragenter", dragenterFx, false);
+        }
+        function dragenterFx(event) {
+          event.target.classList.toggle("active");
+        }
+
+        document.body.ondragover = function (event) {
+          event.preventDefault();
+          event.dataTransfer.dropEffect = "move";
+        };
+
+        document.body.ondrop = function (event) {
+          event.preventDefault();
+          if (event.target.parentNode === monsterDiv) {
+            event.target.classList.toggle("active");
+          }
+          var data = event.dataTransfer.getData("text");
+          var itemMove = document.getElementById(data);
+          partsDiv.style.backgroundColor = "rgba(255,255,255,0.31)";
+          itemMove.className = "itemMove";
+
+          itemMove.style.top = event.clientY - yDistance + "px";
+          itemMove.style.left = event.clientX - xDistance + "px";
+
+          itemMove.style.zIndex = itemIndex + 1;
+          itemIndex = Number(itemMove.style.zIndex);
+        };
+
+        var heightPartsDiv = window.getComputedStyle(partsDiv).height;
+        partsDiv.style.height = heightPartsDiv;
+      };
+
+      document.getElementsByClassName("btn")[0].onclick = function (e) {
+        history.go(0);
+      };
+    </script>
+  </body>
+</html>
